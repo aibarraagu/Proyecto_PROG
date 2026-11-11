@@ -62,7 +62,7 @@ while (tiendaAbierta == true)
         }
 
         // la talla, no pueide estar vacía
-        Console.Write("Escribe la talla que desees | Talla A0 = XS | A1 = S | A2 = M | A3 = L | A4 = XL | A5 = XXL");
+        Console.Write("Escribe la talla que desees | Talla A0 = XS | A1 = S | A2 = M | A3 = L | A4 = XL | A5 = XXL : ");
         string talla = Console.ReadLine() ?? "";
 
         while (talla.Trim() == "")
