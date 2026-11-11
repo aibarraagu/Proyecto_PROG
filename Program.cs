@@ -142,32 +142,43 @@ string talla = Console.ReadLine() ?? "";
     Console.WriteLine("2 Envío a casa - 6 €");
     Console.WriteLine("2 Envío a casa - 6 €");
     Console.WriteLine("Selecciona una opción: ");
-    int opcionEntrega =int.Parse(Console.ReadLine()!);
+    int opcionEntrega = int.Parse(Console.ReadLine()!);
 
-    while (opcionEntrega <1 || opcionEntrega >2)
+    while (opcionEntrega < 1 || opcionEntrega > 2)
     {
         Console.Write("Elge 1 o 2: ");
         opcionEntrega = int.Parse(Console.ReadLine()!);
     }
-string entrega = "Recogida en tienda";
-string direccion = "";
-double costeEnvio=0;
+    string entrega = "Recogida en tienda";
+    string direccion = "";
+    double costeEnvio = 0;
 
-// la direccion solamente se pide si se elige el envio, si no hay envio logicamente no se pide 
-if (opcionEntrega==2)
+    // la direccion solamente se pide si se elige el envio, si no hay envio logicamente no se pide 
+    if (opcionEntrega == 2)
     {
-        entrega="Envío a casa";
-        costeEnvio=6;
+        entrega = "Envío a casa";
+        costeEnvio = 6;
         Console.Write("Direccion de envío: ");
-        direccion = Console.ReadLine()??"";
+        direccion = Console.ReadLine() ?? "";
+
         while (direccion.Trim() == "")
         {
-            Console.Write("Falta la dirección, escríbela otra vez: ;
-            direccion = Console.ReadLine()?? "");
+            Console.Write("Falta la dirección, escríbela otra vez: ");
+
+            direccion = Console.ReadLine() ?? "";
         }
     }
+    // el nombre del cliente que no puede estar vacío y tiene que dar error 
+    Console.Write("Nombre del cliente: ");
+    string nombreCliente = Console.ReadLine() ?? "";
+    while (nombreCliente.Trim() == "")
+    {
+        Console.Write("El nombre no puede quedar vacío: ");
+        nombreCliente = Console.ReadLine() ?? "";
+    }
 
-
+    //el calculo del total 
+    //el total es el producto mas los extras menos el descuento más el envío
 
 
 }
