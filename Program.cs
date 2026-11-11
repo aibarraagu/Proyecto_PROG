@@ -1,5 +1,7 @@
 ﻿// DisneyjitsuStore
 // datos de la caja
+using System.Security.Cryptography;
+
 int pedidosQueSeHanRealizado = 0;
 double totalRecaudado = 0;
 double ventaMasCara = 0;
@@ -86,11 +88,43 @@ string talla = Console.ReadLine() ?? "";
         Console.WriteLine("2 Cinturón a juego - 12 €");
         Console.WriteLine("3 Kit antihongos - 9 €");
         Console.WriteLine("0 Ya está, no quiero más");
-    Console.WriteLine("");
+        Console.WriteLine("Selecciona una opción: ");
+        opcionExtra = int.Parse(Console.ReadLine()!);
     }
-
-
-
+    if (opcionExtra == 1)
+    {
+        //si ya lo tiene, se avisa y no se suma
+        if (parche == true)
+        {
+            Console.WriteLine("El parche ya está en tu pedido.");
+        }
+        else
+        {
+            parche = true; precioExtras = precioExtras + 8;
+            numExtras++;
+        }
+    }
+    else if (opcionExtra == 2)
+    {
+        if (cinturon == true)
+        {
+            Console.WriteLine("El cinturón ya está en tu pedido.");
+        }
+        else
+        {
+            cinturon = true;
+            precioExtras = precioExtras + 12;
+            numExtras++;
+        }
+    }
+    else if (opcionExtra == 3)
+    {
+        if (kitAntiHongos)
+        {
+            Console.WriteLine("El kit ya está en tu pedido.");
+        } else
+        {kitAntiHongos}
+    }
 
 
 
