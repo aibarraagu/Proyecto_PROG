@@ -1,0 +1,15 @@
+C:\Users\Asier\Pictures\Proyecto_PROG\bin\Debug\net10.0\Proyecto_PROG.exe
+C:\Users\Asier\Pictures\Proyecto_PROG\bin\Debug\net10.0\Proyecto_PROG.deps.json
+C:\Users\Asier\Pictures\Proyecto_PROG\bin\Debug\net10.0\Proyecto_PROG.runtimeconfig.json
+C:\Users\Asier\Pictures\Proyecto_PROG\bin\Debug\net10.0\Proyecto_PROG.dll
+C:\Users\Asier\Pictures\Proyecto_PROG\bin\Debug\net10.0\Proyecto_PROG.pdb
+C:\Users\Asier\Pictures\Proyecto_PROG\obj\Debug\net10.0\Proyecto_PROG.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Asier\Pictures\Proyecto_PROG\obj\Debug\net10.0\Proyecto_PROG.AssemblyInfoInputs.cache
+C:\Users\Asier\Pictures\Proyecto_PROG\obj\Debug\net10.0\Proyecto_PROG.AssemblyInfo.cs
+C:\Users\Asier\Pictures\Proyecto_PROG\obj\Debug\net10.0\Proyecto_PROG.csproj.CoreCompileInputs.cache
+C:\Users\Asier\Pictures\Proyecto_PROG\obj\Debug\net10.0\Proyecto_PROG.sourcelink.json
+C:\Users\Asier\Pictures\Proyecto_PROG\obj\Debug\net10.0\Proyecto_PROG.dll
+C:\Users\Asier\Pictures\Proyecto_PROG\obj\Debug\net10.0\refint\Proyecto_PROG.dll
+C:\Users\Asier\Pictures\Proyecto_PROG\obj\Debug\net10.0\Proyecto_PROG.pdb
+C:\Users\Asier\Pictures\Proyecto_PROG\obj\Debug\net10.0\Proyecto_PROG.genruntimeconfig.cache
+C:\Users\Asier\Pictures\Proyecto_PROG\obj\Debug\net10.0\ref\Proyecto_PROG.dll
