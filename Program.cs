@@ -201,8 +201,47 @@ string talla = Console.ReadLine() ?? "";
     Console.WriteLine("Producto + extras: " + subtotal.ToString("F2") + " €");
     Console.WriteLine("Descuento: -" + costeEnvio.ToString("F2") + " €");
     Console.WriteLine("Envío: " + costeEnvio.ToString("F2") + " euros");
-    Console.WriteLine("A PAGAR: " + totalVenta)
+    Console.WriteLine("A PAGAR: " + totalVenta.ToString("F2") + " €");
 
+    // aqui es por si llega a poner menos dinero de lo que se necesitaría para comprarlo, da error y vuelve a pedir
+    Console.Write("Dinero entregado: ");
+    double dineroEntregado = double.Parse(Console.ReadLine()!);
+
+    while (dineroEntregado < totalVenta)
+    {
+        Console.Write("No es el dinero suficiente. Introduce de nuevo el dinero entregado: ");
+        dineroEntregado = double.Parse(Console.ReadLine()!);
+    }
+    double cambio = dineroEntregado - totalVenta;
+
+    // esto para que sea ctualice la caja 
+    pedidosQueSeHanRealizado++;
+    totalRecaudado = totalRecaudado + totalVenta;
+
+    // con > para que si haya empate se quede con el primero
+    if (totalVenta > ventaMasCara)
+    {
+        ventaMasCara = totalVenta;
+        clienteVentaMasCara = nombreCliente;
+    }
+
+// esto es para hacer el ticket 
+Console.WriteLine(" ");
+Console.WriteLine("=========== TICKET DISNEYJITSUSTORE ===========");
+Console.WriteLine("pedido nº " + pedidosQueSeHanRealizado + " - " + nombreCliente);
+Console.WriteLine(producto + ", talla " + talla);
+
+if (numExtras==0)
+    {
+        Console.WriteLine("Sin extras");
+    }
+    else
+    {
+        Console.WriteLine("Extras:");
+    } if (parche == true)
+    {
+        Console.WriteLine(" + parche bordado");
+    }
 
 
 
