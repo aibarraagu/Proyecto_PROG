@@ -179,6 +179,43 @@ string talla = Console.ReadLine() ?? "";
 
     //el calculo del total 
     //el total es el producto mas los extras menos el descuento más el envío
+    // le ponemos un descuento de 5 euros si el producto incluyendo los extras superan los 100 euros sin contar con el envio
+    double subtotal = precioProducto + precioExtras;
+    double descuento = 0;
+
+    if (subtotal > 100)
+    {
+        descuento = 5;
+    }
+
+    double totalVenta = subtotal - descuento + costeEnvio;
+
+    // esto es para que no salga negativo 
+    if (totalVenta < 0)
+    {
+        totalVenta = 0;
+    }
+
+    // este es todod el resumen antes de cobrar al cliente
+    Console.WriteLine(" ");
+    Console.WriteLine("Producto + extras: " + subtotal.ToString("F2") + " €");
+    Console.WriteLine("Descuento: -" + costeEnvio.ToString("F2") + " €");
+    Console.WriteLine("Envío: " + costeEnvio.ToString("F2") + " euros");
+    Console.WriteLine("A PAGAR: " + totalVenta)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 }
