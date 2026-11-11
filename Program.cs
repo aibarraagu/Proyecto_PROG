@@ -68,4 +68,33 @@ string talla = Console.ReadLine() ?? "";
         Console.Write("La talla es obligatorio, escríbela otra vez: ");
         talla = Console.ReadLine() ?? "";
     }
+
+    //extras, cada uno tiene un bool para que si intentas volver a cobrarlo no puedas si ya lo has hecho
+    bool parche = false;
+    bool cinturon = false;
+
+    int numExtras = 0;
+    double precioExtras = 0;
+    int opcionExtra = -1;
+
+    // se repite hasta que se pulsa 0
+    while (opcionExtra != 0)
+    {
+        Console.WriteLine(" ");
+        Console.WriteLine("Extras (llevas " + numExtras + ", provisional " + (precioProducto + precioExtras).ToString("F2") + " euros)");
+        Console.WriteLine("1 Parche bordado - 8 €");
+        Console.WriteLine("2 Cinturón a juego - 12 €");
+        Console.WriteLine("3 Kit antihongos - 9 €");
+        Console.WriteLine("0 Ya está, no quiero más");
+    Console.WriteLine("");
+    }
+
+
+
+
+
+
+
+
+
 }
