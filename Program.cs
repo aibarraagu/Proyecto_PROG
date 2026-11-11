@@ -1,13 +1,17 @@
 ﻿// DisneyjitsuStore
+// datos de la caja
 int pedidosQueSeHanRealizado = 0;
 double totalRecaudado = 0;
+double ventaMasCara = 0;
+string clienteVentaMasCara = "";
 
-int opcionMenu = 0;
 
+bool tiendaAbierta = true;
 // menu
 
-do
+while (tiendaAbierta == true)
 {
+
     Console.WriteLine();
     Console.WriteLine("========================================");
     Console.WriteLine("             DisneyjitsuStore");
@@ -16,7 +20,43 @@ do
     Console.WriteLine("2. Consultar la caja de la tienda");
     Console.WriteLine("3. Salir");
     Console.Write("Selecciona una opción: ");
-    opcionMenu = int.Parse(Console.ReadLine()!);
-}
+    int opcionMenu = int.Parse(Console.ReadLine()!);
 
-if  
+    if (opcionMenu == 1)
+    {
+        //el producto
+        Console.WriteLine(" ");
+        Console.WriteLine("¿Qué se lleva?");
+        Console.WriteLine("1 Kimono (gi) - 85 €");
+        Console.WriteLine("2 Rashguard - 35€");
+        Console.WriteLine("3 Shorts no-gi - 30€");
+        Console.WriteLine("Selecciona una opción: ");
+        int opcionProducto = int.Parse(Console.ReadLine()!);
+
+        //si no es un numero de los que aparece, te lo vuelve a pedir
+        while (opcionProducto < 1 || opcionProducto > 3)
+        {
+            Console.WriteLine("Opción no válida, elige de 1 a 3: ");
+            opcionProducto = int.Parse(Console.ReadLine()!);
+        }
+    }
+    string producto;
+    double precioProducto;
+    //se guarda el precio y el nombre según lo que elija
+    if (opcionProducto == 1)
+    {
+        producto = "Kimono(gi)";
+        precioProducto = 85;
+    }
+    else if (opcionProducto ==2){
+    producto="Rasguard";
+    precioProducto=35;
+    }
+
+
+
+
+
+
+
+}
