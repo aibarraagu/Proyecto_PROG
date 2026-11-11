@@ -122,11 +122,50 @@ string talla = Console.ReadLine() ?? "";
         if (kitAntiHongos)
         {
             Console.WriteLine("El kit ya está en tu pedido.");
-        } else
-        {kitAntiHongos}
+        }
+        else
+        {
+            kitAntiHongos = true;
+            precioExtras = precioExtras + 9;
+            numExtras++;
+        }
     }
+    else if (opcionExtra != 0)
+    {
+        //si el numero es fuera de rango
+        Console.WriteLine("Opción inválida");
+    }
+    //parte de la entrega, tienda o por envio
+    Console.WriteLine(" ");
+    Console.WriteLine("¿Cómo quieres adquirirlo?");
+    Console.WriteLine("1 En la tienda - gratis");
+    Console.WriteLine("2 Envío a casa - 6 €");
+    Console.WriteLine("2 Envío a casa - 6 €");
+    Console.WriteLine("Selecciona una opción: ");
+    int opcionEntrega =int.Parse(Console.ReadLine()!);
 
+    while (opcionEntrega <1 || opcionEntrega >2)
+    {
+        Console.Write("Elge 1 o 2: ");
+        opcionEntrega = int.Parse(Console.ReadLine()!);
+    }
+string entrega = "Recogida en tienda";
+string direccion = "";
+double costeEnvio=0;
 
+// la direccion solamente se pide si se elige el envio, si no hay envio logicamente no se pide 
+if (opcionEntrega==2)
+    {
+        entrega="Envío a casa";
+        costeEnvio=6;
+        Console.Write("Direccion de envío: ");
+        direccion = Console.ReadLine()??"";
+        while (direccion.Trim() == "")
+        {
+            Console.Write("Falta la dirección, escríbela otra vez: ;
+            direccion = Console.ReadLine()?? "");
+        }
+    }
 
 
 
